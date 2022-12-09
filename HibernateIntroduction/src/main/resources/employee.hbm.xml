@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.pojo.Employee" table="emphibernate">
+		<id name="empId" column="t_empId">
+			<generator class="assigned" />
+		</id>
+		<property name="firstName" column="t_firstName" type="string" /><!-- 
+			in this case column and type attribute is optional if we will not provide 
+			that then the column names of the table created in the database will be as 
+			per the instance variable field names of class to which the table is mapped -->
+		<property name="lastName" column="t_lastName" type="string" />
+		<property name="salary" column="t_salary" type="double" />
+
+	</class>
+
+</hibernate-mapping>

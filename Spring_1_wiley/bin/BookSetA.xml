@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<bean id="book1" class="com.beans.Book">
+		<property name="isbn" value="B1536" />
+		<property name="name" value="abc" />
+		<property name="price" value="896" />
+	</bean>
+	<bean id="book2" class="com.beans.Book">
+		<property name="isbn" value="B1537" />
+		<property name="name" value="def" />
+		<property name="price" value="536" />
+	</bean>
+	<bean id="book3" class="com.beans.Book">
+		<property name="isbn" value="B1235" />
+		<property name="name" value="ghi" />
+		<property name="price" value="432" />
+	</bean>
+	<bean id="book4" class="com.beans.Book">
+		<property name="isbn" value="B1895" />
+		<property name="name" value="jkl" />
+		<property name="price" value="1236" />
+	</bean>
+	<bean id="book5" class="com.beans.Book">
+		<property name="isbn" value="B1895" />
+		<property name="name" value="jkl" />
+		<property name="price" value="1236" />
+	</bean>
+
+	<bean id="librarySet1" class="com.beans.LibrarySet">
+		<property name="books">
+			<set>
+				<ref bean="book1" />
+				<ref bean="book2" />
+				<ref bean="book3" />
+				<ref bean="book4" />
+				<ref bean="book5" />
+			</set>
+		</property>
+	</bean>
+
+</beans>

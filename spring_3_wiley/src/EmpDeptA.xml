@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<bean id="dept1" class="com.autowiring.beans.Department">
+		<property name="name" value="technology" />
+	</bean>
+
+	<bean id="emp1" class="com.autowiring.beans.Employee">
+		<property name="name" value="sandeep" />
+		<property name="department" ref="dept1" />
+	</bean>
+
+</beans>
